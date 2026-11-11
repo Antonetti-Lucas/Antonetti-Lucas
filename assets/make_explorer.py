@@ -121,10 +121,7 @@ def render():
         ty = yc + 16 + i * TILE_H
         p.append(folder(mx + 20, ty + 4, 1.0))
         tx = mx + 84
-        nw = len(name) * 7.6 + 8
-        if i == 0:  # first item shown selected
-            p.append(f'<rect x="{tx-3}" y="{ty+2}" width="{nw:.0f}" height="17" fill="#316ac5"/>')
-        p.append(f'<text x="{tx}" y="{ty+15}" class="ui b" fill="{"#fff" if i == 0 else "#000"}">{escape(name)}</text>')
+        p.append(f'<text x="{tx}" y="{ty+15}" class="ui b" fill="#000">{escape(name)}</text>')
         for j, line in enumerate(textwrap.wrap(desc, max(50, len(desc) // 2 + 8))):
             p.append(f'<text x="{tx}" y="{ty+33 + j*15}" class="ui">{escape(line)}</text>')
         p.append(f'<text x="{tx}" y="{ty+33 + 2*15}" class="ui" fill="#808080">{escape(kind)}</text>')

@@ -57,8 +57,7 @@
   <rect x="26" y="245" width="186" height="72" rx="4" fill="#d6dff7"/><path d="M26 269 V249 Q26 245 30 245 H208 Q212 245 212 249 V269 Z" fill="url(#taskhdr)"/><text x="36" y="261" class="ui b" fill="#215dc6">Other Places</text><circle cx="198" cy="257" r="8" fill="#fff" stroke="#a8b8e8"/><path d="M194 259 l4 -4 l4 4 M194 255 l4 -4 l4 4" stroke="#215dc6" stroke-width="1.4" fill="none" transform="translate(0 1)"/><text x="36" y="287" class="ui">🖥️</text><text x="56" y="287" class="ui" fill="#215dc6">My Computer</text><text x="36" y="306" class="ui">🌐</text><text x="56" y="306" class="ui" fill="#215dc6">My Network</text>
   <rect x="224" y="130" width="662" height="196" fill="#fff"/>
   <g transform="translate(244 150) scale(1.0)"><path d="M2 6 H18 L22 10 H46 V40 H2 Z" fill="#e3ad3b" stroke="#b07d1c"/><path d="M0 15 H48 L44 42 H4 Z" fill="url(#fold)" stroke="#c08a1e"/><path d="M2 17 H45" stroke="#fff7d6" stroke-width="1.5" opacity=".8"/></g>
-  <rect x="305" y="148" width="76" height="17" fill="#316ac5"/>
-  <text x="308" y="161" class="ui b" fill="#fff">shelflife</text>
+  <text x="308" y="161" class="ui b" fill="#000">shelflife</text>
   <text x="308" y="179" class="ui">A local recommender: logs what you rate and how much you</text>
   <text x="308" y="194" class="ui">use it, then suggests what to try next.</text>
   <text x="308" y="209" class="ui" fill="#808080">File Folder  ·  Python  ·  MIT License</text>
