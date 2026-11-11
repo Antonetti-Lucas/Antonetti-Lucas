@@ -29,7 +29,6 @@
 </p>
 
 ### 💽 Disk Defragmenter
-<sub>My last year of contributions, one stripe per day, then "defragmented". Updated daily.</sub>
 
 <img src="https://raw.githubusercontent.com/Antonetti-Lucas/Antonetti-Lucas/output/defrag.svg" alt="Contribution graph drawn as a Windows XP Disk Defragmenter" width="100%"/>
 
