@@ -33,7 +33,7 @@
 
 <img src="https://raw.githubusercontent.com/Antonetti-Lucas/Antonetti-Lucas/output/defrag.svg" alt="Contribution graph drawn as a Windows XP Disk Defragmenter" width="100%"/>
 
-### 🌐 My Network Places
+### 🌐 My Network
 
 <p>
   <a href="https://www.linkedin.com/in/lucasoliveiraantonetti/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge" alt="LinkedIn"/></a>
