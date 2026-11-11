@@ -169,22 +169,24 @@ outdir = Path(__file__).with_name("explorer")
 outdir.mkdir(exist_ok=True)
 for old in outdir.glob("*.svg"):
     old.unlink()
+# File names carry a content hash (shelflife-1a2b3c4.svg): GitHub's image redirect drops query
+# strings, so a new name is the only reliable way to stop browsers showing a cached old strip.
+import hashlib
+files = {}
 for name, a, b in zip(names, cuts, cuts[1:]):
     svg = full.replace(head, f'width="{W}" height="{b-a}" viewBox="0 {a} {W} {b-a}"', 1)
-    (outdir / f"{name}.svg").write_text(svg, encoding="utf-8")
+    files[name] = f"{name}-{hashlib.sha1(svg.encode()).hexdigest()[:7]}.svg"
+    (outdir / files[name]).write_text(svg, encoding="utf-8")
 print("wrote", len(names), "strips to", outdir)
 
 # Rewrite the README block between the Documents heading and the next "### " heading.
-# ?v=<hash> changes whenever a strip changes, so browsers don't keep showing a cached old image.
-import hashlib
 user = "Antonetti-Lucas"
 lines = []
 for name in names:
     is_folder = name not in ("top", "bottom")
     url = f"https://github.com/{user}/{name}" if is_folder else f"https://github.com/{user}?tab=repositories"
     alt = f"{name} folder" if is_folder else ("Documents window" if name == "top" else f"{len(FOLDERS)} objects")
-    v = hashlib.sha1((outdir / f"{name}.svg").read_bytes()).hexdigest()[:7]
-    lines.append(f'<a href="{url}"><img align="left" width="100%" src="assets/explorer/{name}.svg?v={v}" alt="{alt}"/></a>')
+    lines.append(f'<a href="{url}"><img align="left" width="100%" src="assets/explorer/{files[name]}" alt="{alt}"/></a>')
 block = "\n".join(lines) + '\n<br clear="both"/>\n\n'
 readme = Path(__file__).resolve().parent.parent / "README.md"
 text = readme.read_text(encoding="utf-8")
