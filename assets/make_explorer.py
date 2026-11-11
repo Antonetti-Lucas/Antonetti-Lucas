@@ -174,9 +174,21 @@ for name, a, b in zip(names, cuts, cuts[1:]):
     (outdir / f"{name}.svg").write_text(svg, encoding="utf-8")
 print("wrote", len(names), "strips to", outdir)
 
-# README snippet (paste between the Documents heading and the next section)
+# Rewrite the README block between the Documents heading and the next "### " heading.
+# ?v=<hash> changes whenever a strip changes, so browsers don't keep showing a cached old image.
+import hashlib
 user = "Antonetti-Lucas"
+lines = []
 for name in names:
-    url = f"https://github.com/{user}/{name}" if name not in ("top", "bottom") else f"https://github.com/{user}?tab=repositories"
-    print(f'<a href="{url}"><img align="left" width="100%" src="assets/explorer/{name}.svg" alt="{name}"/></a>')
-print('<br clear="both"/>')
+    is_folder = name not in ("top", "bottom")
+    url = f"https://github.com/{user}/{name}" if is_folder else f"https://github.com/{user}?tab=repositories"
+    alt = f"{name} folder" if is_folder else ("Documents window" if name == "top" else f"{len(FOLDERS)} objects")
+    v = hashlib.sha1((outdir / f"{name}.svg").read_bytes()).hexdigest()[:7]
+    lines.append(f'<a href="{url}"><img align="left" width="100%" src="assets/explorer/{name}.svg?v={v}" alt="{alt}"/></a>')
+block = "\n".join(lines) + '\n<br clear="both"/>\n\n'
+readme = Path(__file__).resolve().parent.parent / "README.md"
+text = readme.read_text(encoding="utf-8")
+start = text.index("### 📁 Documents\n\n") + len("### 📁 Documents\n\n")
+end = text.index("\n### ", start) + 1
+readme.write_text(text[:start] + block + text[end:], encoding="utf-8")
+print("updated", readme.name)
