@@ -4,7 +4,11 @@
 
 ### 📁 Documents
 
-<a href="https://github.com/Antonetti-Lucas?tab=repositories"><img src="assets/explorer.svg" alt="Explorer window listing my projects: shelflife and Moonkey-Game" width="100%"/></a>
+<a href="https://github.com/Antonetti-Lucas?tab=repositories"><img align="left" width="100%" src="assets/explorer/top.svg" alt="Documents window"/></a>
+<a href="https://github.com/Antonetti-Lucas/shelflife"><img align="left" width="100%" src="assets/explorer/shelflife.svg" alt="shelflife folder"/></a>
+<a href="https://github.com/Antonetti-Lucas/Moonkey-Game"><img align="left" width="100%" src="assets/explorer/Moonkey-Game.svg" alt="Moonkey-Game folder"/></a>
+<a href="https://github.com/Antonetti-Lucas?tab=repositories"><img align="left" width="100%" src="assets/explorer/bottom.svg" alt="2 objects"/></a>
+<br clear="both"/>
 
 ### 🛠️ Control Panel
 

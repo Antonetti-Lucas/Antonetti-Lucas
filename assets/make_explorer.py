@@ -161,6 +161,25 @@ def render():
 '''
 
 
-out = Path(__file__).with_name("explorer.svg")
-out.write_text(render(), encoding="utf-8")
-print("wrote", out)
+# The window is cut into horizontal strips (top, one per folder, bottom) so each folder
+# can be its own link in the README. Every strip draws the full window and just crops it.
+full = render()
+head = f'width="{W}" height="{H}" viewBox="0 0 {W} {H}"'
+yc = Y0 + TITLE_H + MENU_H + TOOL_H + ADDR_H
+cuts = [0, yc + 10] + [yc + 10 + (i + 1) * TILE_H for i in range(len(FOLDERS))] + [H]
+names = ["top"] + [n for n, _, _ in FOLDERS] + ["bottom"]
+outdir = Path(__file__).with_name("explorer")
+outdir.mkdir(exist_ok=True)
+for old in outdir.glob("*.svg"):
+    old.unlink()
+for name, a, b in zip(names, cuts, cuts[1:]):
+    svg = full.replace(head, f'width="{W}" height="{b-a}" viewBox="0 {a} {W} {b-a}"', 1)
+    (outdir / f"{name}.svg").write_text(svg, encoding="utf-8")
+print("wrote", len(names), "strips to", outdir)
+
+# README snippet (paste between the Documents heading and the next section)
+user = "Antonetti-Lucas"
+for name in names:
+    url = f"https://github.com/{user}/{name}" if name not in ("top", "bottom") else f"https://github.com/{user}?tab=repositories"
+    print(f'<a href="{url}"><img align="left" width="100%" src="assets/explorer/{name}.svg" alt="{name}"/></a>')
+print('<br clear="both"/>')
