@@ -2,12 +2,10 @@
   <img src="assets/banner.svg" alt="Command prompt window: Lucas Antonetti, Computer Science @ UNESP Bauru" width="100%"/>
 </p>
 
-### 📁 C:\Users\Lucas\My Documents
+### 📁 Documents
 
-| Name | Type | Description |
-|---|---|---|
-| 📁 **[shelflife](https://github.com/Antonetti-Lucas/shelflife)** | Python | A local recommender: logs what you rate and how much you use it, then suggests what to try next. |
-| 📁 **[Moonkey-Game](https://github.com/Antonetti-Lucas/Moonkey-Game)** | C# · Unity | Computer Graphics project at UNESP, themed on the UN goals for life on land, life below water and climate action. |
+<a href="https://github.com/Antonetti-Lucas?tab=repositories"><img src="assets/explorer.svg" alt="Explorer window listing my projects: shelflife and Moonkey-Game" width="100%"/></a>
+
 ### 🛠️ Control Panel
 
 <p>
