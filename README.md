@@ -32,3 +32,10 @@
 <sub>My last year of contributions, one stripe per day, then "defragmented". Updated daily.</sub>
 
 <img src="https://raw.githubusercontent.com/Antonetti-Lucas/Antonetti-Lucas/output/defrag.svg" alt="Contribution graph drawn as a Windows XP Disk Defragmenter" width="100%"/>
+
+### 🌐 My Network Places
+
+<p>
+  <a href="https://www.linkedin.com/in/lucasoliveiraantonetti/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge" alt="LinkedIn"/></a>
+  <a href="https://lattes.cnpq.br/8175600962982179"><img src="https://img.shields.io/badge/Curr%C3%ADculo%20Lattes-0F4C81?style=for-the-badge" alt="Currículo Lattes"/></a>
+</p>
