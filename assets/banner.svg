@@ -74,7 +74,7 @@
   <text x="266" y="146" class="user" opacity="0">lucas@ANTONETTI-PC<set attributeName="opacity" to="1" begin="2.00s" fill="freeze"/></text>
   <text x="266" y="165" class="dim" opacity="0">------------------<set attributeName="opacity" to="1" begin="2.05s" fill="freeze"/></text>
   <text x="266" y="184" opacity="0"><tspan class="key">OS:</tspan><tspan class="fg" x="371">Computer Science @ UNESP Bauru</tspan><set attributeName="opacity" to="1" begin="2.15s" fill="freeze"/></text>
-  <text x="266" y="203" opacity="0"><tspan class="key">Shell:</tspan><tspan class="fg" x="371">Python, C#</tspan><set attributeName="opacity" to="1" begin="2.27s" fill="freeze"/></text>
+  <text x="266" y="203" opacity="0"><tspan class="key">Shell:</tspan><tspan class="fg" x="371">Python, C#, Java, PyTorch</tspan><set attributeName="opacity" to="1" begin="2.27s" fill="freeze"/></text>
   <text x="266" y="222" opacity="0"><tspan class="key">Interests:</tspan><tspan class="fg" x="371">AI, recommender systems, data</tspan><set attributeName="opacity" to="1" begin="2.39s" fill="freeze"/></text>
   <text x="266" y="241" opacity="0"><tspan class="key">Working on:</tspan><tspan class="fg" x="371">shelflife, a Python recommender</tspan><set attributeName="opacity" to="1" begin="2.51s" fill="freeze"/></text>
   <text x="266" y="260" opacity="0"><tspan class="key">Uptime:</tspan><tspan class="fg" x="371">on GitHub since 2023</tspan><set attributeName="opacity" to="1" begin="2.63s" fill="freeze"/></text>

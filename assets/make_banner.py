@@ -6,7 +6,7 @@ from xml.sax.saxutils import escape
 
 INFO = [  # (key, value) shown next to the logo
     ("OS", "Computer Science @ UNESP Bauru"),
-    ("Shell", "Python, C#"),
+    ("Shell", "Python, C#, Java, PyTorch"),
     ("Interests", "AI, recommender systems, data"),
     ("Working on", "shelflife, a Python recommender"),
     ("Uptime", "on GitHub since 2023"),
