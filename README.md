@@ -30,9 +30,12 @@
   <!-- add more: logo names are on https://simpleicons.org -->
 </p>
 
+<!-- Disk Defragmenter graph, hidden for now. To bring it back, delete these first two lines
+     and the closing "-->" line, then re-enable the "Disk Defragmenter graph" workflow in the Actions tab.
 ### 💽 Disk Defragmenter
 
 <img src="https://raw.githubusercontent.com/Antonetti-Lucas/Antonetti-Lucas/output/defrag.svg" alt="Contribution graph drawn as a Windows XP Disk Defragmenter" width="100%"/>
+-->
 
 ### 🌐 My Network
 
