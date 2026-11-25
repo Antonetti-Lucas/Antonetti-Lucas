@@ -4,10 +4,11 @@
 
 ### 📁 Documents
 
-<a href="https://github.com/Antonetti-Lucas?tab=repositories"><img align="left" width="100%" src="assets/explorer/top-51c483f.svg" alt="Documents window"/></a>
-<a href="https://github.com/Antonetti-Lucas/shelflife"><img align="left" width="100%" src="assets/explorer/shelflife-a0c2597.svg" alt="shelflife folder"/></a>
-<a href="https://github.com/Antonetti-Lucas/Moonkey-Game"><img align="left" width="100%" src="assets/explorer/Moonkey-Game-8d37f8d.svg" alt="Moonkey-Game folder"/></a>
-<a href="https://github.com/Antonetti-Lucas?tab=repositories"><img align="left" width="100%" src="assets/explorer/bottom-6fd3387.svg" alt="2 objects"/></a>
+<a href="https://github.com/Antonetti-Lucas?tab=repositories"><img align="left" width="100%" src="assets/explorer/top-568b34c.svg" alt="Documents window"/></a>
+<a href="https://github.com/Antonetti-Lucas/terrasylva"><img align="left" width="100%" src="assets/explorer/terrasylva-134b35a.svg" alt="terrasylva folder"/></a>
+<a href="https://github.com/Antonetti-Lucas/shelflife"><img align="left" width="100%" src="assets/explorer/shelflife-0566ce0.svg" alt="shelflife folder"/></a>
+<a href="https://github.com/Antonetti-Lucas/Moonkey-Game"><img align="left" width="100%" src="assets/explorer/Moonkey-Game-15c7bb6.svg" alt="Moonkey-Game folder"/></a>
+<a href="https://github.com/Antonetti-Lucas?tab=repositories"><img align="left" width="100%" src="assets/explorer/bottom-23a3543.svg" alt="3 objects"/></a>
 <br clear="both"/>
 
 ### 🛠️ Control Panel

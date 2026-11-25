@@ -7,6 +7,8 @@ from xml.sax.saxutils import escape
 
 PATH = "C:\\Users\\Lucas\\Documents"
 FOLDERS = [  # (name, type line, description)
+    ("terrasylva", "File Folder  ·  Python  ·  MIT License",
+     "Procedural worlds in Python: river-carved terrain, oceans, climate and biomes, with a desktop editor."),
     ("shelflife", "File Folder  ·  Python  ·  MIT License",
      "A local recommender: logs what you rate and how much you use it, then suggests what to try next."),
     ("Moonkey-Game", "File Folder  ·  C#  ·  Unity  ·  GPL-3.0",
