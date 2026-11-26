@@ -1,14 +1,14 @@
 <p align="center">
-  <img src="assets/banner.svg" alt="Command prompt window: Lucas Antonetti, Computer Science @ UNESP Bauru" width="100%"/>
+  <img src="assets/banner-7b8532c.svg" alt="Command prompt window: Lucas Antonetti, Computer Science @ UNESP Bauru" width="100%"/>
 </p>
 
 ### 📁 Documents
 
-<a href="https://github.com/Antonetti-Lucas?tab=repositories"><img align="left" width="100%" src="assets/explorer/top-568b34c.svg" alt="Documents window"/></a>
-<a href="https://github.com/Antonetti-Lucas/terrasylva"><img align="left" width="100%" src="assets/explorer/terrasylva-134b35a.svg" alt="terrasylva folder"/></a>
-<a href="https://github.com/Antonetti-Lucas/shelflife"><img align="left" width="100%" src="assets/explorer/shelflife-0566ce0.svg" alt="shelflife folder"/></a>
-<a href="https://github.com/Antonetti-Lucas/Moonkey-Game"><img align="left" width="100%" src="assets/explorer/Moonkey-Game-15c7bb6.svg" alt="Moonkey-Game folder"/></a>
-<a href="https://github.com/Antonetti-Lucas?tab=repositories"><img align="left" width="100%" src="assets/explorer/bottom-23a3543.svg" alt="3 objects"/></a>
+<a href="https://github.com/Antonetti-Lucas?tab=repositories"><img align="left" width="100%" src="assets/explorer/top-d896c29.svg" alt="Documents window"/></a>
+<a href="https://github.com/Antonetti-Lucas/terrasylva"><img align="left" width="100%" src="assets/explorer/terrasylva-4b65914.svg" alt="terrasylva folder"/></a>
+<a href="https://github.com/Antonetti-Lucas/shelflife"><img align="left" width="100%" src="assets/explorer/shelflife-297c106.svg" alt="shelflife folder"/></a>
+<a href="https://github.com/Antonetti-Lucas/Moonkey-Game"><img align="left" width="100%" src="assets/explorer/Moonkey-Game-0563e54.svg" alt="Moonkey-Game folder"/></a>
+<a href="https://github.com/Antonetti-Lucas?tab=repositories"><img align="left" width="100%" src="assets/explorer/bottom-4a27d26.svg" alt="3 objects"/></a>
 <br clear="both"/>
 
 ### 🛠️ Control Panel

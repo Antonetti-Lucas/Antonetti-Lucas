@@ -42,15 +42,15 @@ def green_btn(cx, cy, direction, faded=False):
 
 def task_box(x, y, w, title, items):
     h = 26 + 19 * len(items) + 8
-    out = [f'<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="4" fill="#d6dff7"/>',
+    out = [f'<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="4" fill="#2a2f36"/>',
            f'<path d="M{x} {y+24} V{y+4} Q{x} {y} {x+4} {y} H{x+w-4} Q{x+w} {y} {x+w} {y+4} V{y+24} Z" fill="url(#taskhdr)"/>',
-           f'<text x="{x+10}" y="{y+16}" class="ui b" fill="#215dc6">{escape(title)}</text>',
-           f'<circle cx="{x+w-14}" cy="{y+12}" r="8" fill="#fff" stroke="#a8b8e8"/>',
-           f'<path d="M{x+w-18} {y+14} l4 -4 l4 4 M{x+w-18} {y+10} l4 -4 l4 4" stroke="#215dc6" stroke-width="1.4" fill="none" transform="translate(0 1)"/>']
+           f'<text x="{x+10}" y="{y+16}" class="ui b" fill="#8cc0ff">{escape(title)}</text>',
+           f'<circle cx="{x+w-14}" cy="{y+12}" r="8" fill="#1d2025" stroke="#5b6470"/>',
+           f'<path d="M{x+w-18} {y+14} l4 -4 l4 4 M{x+w-18} {y+10} l4 -4 l4 4" stroke="#8cc0ff" stroke-width="1.4" fill="none" transform="translate(0 1)"/>']
     for i, (icon, label) in enumerate(items):
         ty = y + 42 + i * 19
         out.append(f'<text x="{x+10}" y="{ty}" class="ui">{icon}</text>'
-                   f'<text x="{x+30}" y="{ty}" class="ui" fill="#215dc6">{escape(label)}</text>')
+                   f'<text x="{x+30}" y="{ty}" class="ui" fill="#8cc0ff">{escape(label)}</text>')
     return "".join(out), h
 
 
@@ -64,7 +64,7 @@ def render():
 
     p = []
     # frame + title bar
-    p.append(f'<rect x="{X0}" y="{Y0}" width="{W-20}" height="{H-20}" rx="8" fill="#0831d9"/>')
+    p.append(f'<rect x="{X0}" y="{Y0}" width="{W-20}" height="{H-20}" rx="8" fill="#0a0b0d"/>')
     p.append(f'<path d="M{X0} {yt} V{Y0+8} Q{X0} {Y0} {X0+8} {Y0} H{R-8} Q{R} {Y0} {R} {Y0+8} V{yt} Z" fill="url(#titlebar)"/>')
     p.append(folder(X0 + 8, Y0 + 6, 0.38))
     p.append(f'<text x="{X0+32}" y="{Y0+20}" class="title">Documents</text>')
@@ -77,32 +77,32 @@ def render():
   <path d="M{R-23} {Y0+10} l11 11 M{R-12} {Y0+10} l-11 11" stroke="#fff" stroke-width="2.4"/>''')
 
     # menu bar, toolbar, address bar (beige chrome)
-    p.append(f'<rect x="{X0+4}" y="{yt}" width="{W-28}" height="{MENU_H+TOOL_H+ADDR_H}" fill="#ece9d8"/>')
+    p.append(f'<rect x="{X0+4}" y="{yt}" width="{W-28}" height="{MENU_H+TOOL_H+ADDR_H}" fill="#24282e"/>')
     p.append(f'<text x="{X0+12}" y="{yt+15}" class="ui" style="white-space:pre">File    Edit    View    Favorites    Tools    Help</text>')
-    p.append(f'<rect x="{X0+4}" y="{ym}" width="{W-28}" height="1" fill="#d8d2bd"/><rect x="{X0+4}" y="{ym+1}" width="{W-28}" height="1" fill="#fff"/>')
+    p.append(f'<rect x="{X0+4}" y="{ym}" width="{W-28}" height="1" fill="#33383f"/><rect x="{X0+4}" y="{ym+1}" width="{W-28}" height="1" fill="#0f1113"/>')
     cy = ym + TOOL_H / 2
     p.append(green_btn(X0 + 28, cy, "left"))
-    p.append(f'<text x="{X0+46}" y="{cy+4}" class="ui">Back</text><path d="M{X0+80} {cy-1} l3 3 l3 -3" fill="#000"/>')
+    p.append(f'<text x="{X0+46}" y="{cy+4}" class="ui">Back</text><path d="M{X0+80} {cy-1} l3 3 l3 -3" fill="#e4e6e9"/>')
     p.append(green_btn(X0 + 106, cy, "right", faded=True))
-    p.append(f'<path d="M{X0+124} {cy-1} l3 3 l3 -3" fill="#000" opacity=".45"/>')
+    p.append(f'<path d="M{X0+124} {cy-1} l3 3 l3 -3" fill="#e4e6e9" opacity=".45"/>')
     p.append(folder(X0 + 142, cy - 10, 0.42))
     p.append(f'<path d="M{X0+152} {cy+6} V{cy-6} M{X0+147} {cy-1} L{X0+152} {cy-7} L{X0+157} {cy-1}" stroke="#2a8a2a" stroke-width="2.4" fill="none"/>')
-    p.append(f'<rect x="{X0+176}" y="{ym+7}" width="1" height="{TOOL_H-14}" fill="#c5c2b2"/>')
-    p.append(f'<circle cx="{X0+196}" cy="{cy-2}" r="6" fill="#dbe9ff" stroke="#3a6fc4" stroke-width="2"/>'
+    p.append(f'<rect x="{X0+176}" y="{ym+7}" width="1" height="{TOOL_H-14}" fill="#3b414a"/>')
+    p.append(f'<circle cx="{X0+196}" cy="{cy-2}" r="6" fill="#dbe9ff" stroke="#5ba2ff" stroke-width="2"/>'
              f'<path d="M{X0+200} {cy+2} l6 6" stroke="#7a5a2a" stroke-width="3" stroke-linecap="round"/>')
     p.append(f'<text x="{X0+212}" y="{cy+4}" class="ui">Search</text>')
     p.append(folder(X0 + 262, cy - 10, 0.42))
     p.append(f'<text x="{X0+286}" y="{cy+4}" class="ui">Folders</text>')
-    p.append(f'<rect x="{X0+336}" y="{ym+7}" width="1" height="{TOOL_H-14}" fill="#c5c2b2"/>')
-    p.append("".join(f'<rect x="{X0+348 + (i%2)*7}" y="{cy-7 + (i//2)*7}" width="5" height="5" fill="#3a6fc4"/>' for i in range(4)))
-    p.append(f'<path d="M{X0+366} {cy-1} l3 3 l3 -3" fill="#000"/>')
-    p.append(f'<rect x="{X0+4}" y="{ya}" width="{W-28}" height="1" fill="#d8d2bd"/><rect x="{X0+4}" y="{ya+1}" width="{W-28}" height="1" fill="#fff"/>')
-    p.append(f'<text x="{X0+12}" y="{ya+18}" class="ui" fill="#5a5a5a">Address</text>')
-    p.append(f'<rect x="{X0+64}" y="{ya+4}" width="{W-160}" height="20" fill="#fff" stroke="#7f9db9"/>')
+    p.append(f'<rect x="{X0+336}" y="{ym+7}" width="1" height="{TOOL_H-14}" fill="#3b414a"/>')
+    p.append("".join(f'<rect x="{X0+348 + (i%2)*7}" y="{cy-7 + (i//2)*7}" width="5" height="5" fill="#5ba2ff"/>' for i in range(4)))
+    p.append(f'<path d="M{X0+366} {cy-1} l3 3 l3 -3" fill="#e4e6e9"/>')
+    p.append(f'<rect x="{X0+4}" y="{ya}" width="{W-28}" height="1" fill="#33383f"/><rect x="{X0+4}" y="{ya+1}" width="{W-28}" height="1" fill="#0f1113"/>')
+    p.append(f'<text x="{X0+12}" y="{ya+18}" class="ui" fill="#9aa3ad">Address</text>')
+    p.append(f'<rect x="{X0+64}" y="{ya+4}" width="{W-160}" height="20" fill="#1d2025" stroke="#3b414a"/>')
     p.append(folder(X0 + 69, ya + 6, 0.32))
     p.append(f'<text x="{X0+90}" y="{ya+18}" class="ui">{escape(PATH)}</text>')
-    p.append(f'<rect x="{X0+W-117}" y="{ya+4}" width="18" height="20" fill="url(#hdr)" stroke="#7f9db9"/>'
-             f'<path d="M{X0+W-112} {ya+12} l4 4 l4 -4" fill="#4d6185"/>')
+    p.append(f'<rect x="{X0+W-117}" y="{ya+4}" width="18" height="20" fill="url(#hdr)" stroke="#3b414a"/>'
+             f'<path d="M{X0+W-112} {ya+12} l4 4 l4 -4" fill="#c9ced6"/>')
     p.append(f'<circle cx="{X0+W-84}" cy="{ya+14}" r="9" fill="url(#go)" stroke="#2c7a2c"/>'
              f'<path d="M{X0+W-88} {ya+14} H{X0+W-80} M{X0+W-83} {ya+10} L{X0+W-79} {ya+14} L{X0+W-83} {ya+18}" stroke="#fff" stroke-width="2" fill="none"/>'
              f'<text x="{X0+W-70}" y="{ya+18}" class="ui">Go</text>')
@@ -118,42 +118,42 @@ def render():
 
     # main pane: tiles view
     mx = X0 + 4 + PANE_W
-    p.append(f'<rect x="{mx}" y="{yc}" width="{R - 4 - mx}" height="{CONTENT_H}" fill="#fff"/>')
+    p.append(f'<rect x="{mx}" y="{yc}" width="{R - 4 - mx}" height="{CONTENT_H}" fill="#1d2025"/>')
     for i, (name, kind, desc) in enumerate(FOLDERS):
         ty = yc + 16 + i * TILE_H
         p.append(folder(mx + 20, ty + 4, 1.0))
         tx = mx + 84
-        p.append(f'<text x="{tx}" y="{ty+15}" class="ui b" fill="#000">{escape(name)}</text>')
+        p.append(f'<text x="{tx}" y="{ty+15}" class="ui b" fill="#e4e6e9">{escape(name)}</text>')
         for j, line in enumerate(textwrap.wrap(desc, max(50, len(desc) // 2 + 8))):
             p.append(f'<text x="{tx}" y="{ty+33 + j*15}" class="ui">{escape(line)}</text>')
-        p.append(f'<text x="{tx}" y="{ty+33 + 2*15}" class="ui" fill="#808080">{escape(kind)}</text>')
+        p.append(f'<text x="{tx}" y="{ty+33 + 2*15}" class="ui" fill="#9aa3ad">{escape(kind)}</text>')
 
     # status bar
-    p.append(f'<rect x="{X0+4}" y="{ys}" width="{W-28}" height="{STATUS_H}" fill="#ece9d8"/>'
-             f'<rect x="{X0+4}" y="{ys}" width="{W-28}" height="1" fill="#c5c2b2"/>')
+    p.append(f'<rect x="{X0+4}" y="{ys}" width="{W-28}" height="{STATUS_H}" fill="#24282e"/>'
+             f'<rect x="{X0+4}" y="{ys}" width="{W-28}" height="1" fill="#3b414a"/>')
     p.append(f'<text x="{X0+12}" y="{ys+15}" class="ui">{len(FOLDERS)} objects</text>')
-    p.append(f'<rect x="{R-170}" y="{ys+3}" width="1" height="{STATUS_H-6}" fill="#c5c2b2"/>')
+    p.append(f'<rect x="{R-170}" y="{ys+3}" width="1" height="{STATUS_H-6}" fill="#3b414a"/>')
     p.append(f'<text x="{R-160}" y="{ys+15}" class="ui">🖥️  My Computer</text>')
 
     body = "\n  ".join(p)
     return f'''<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}">
   <style>
-    .ui {{ font-family: {UI}; font-size: 12px; }}
+    .ui {{ font-family: {UI}; font-size: 12px; fill: #e4e6e9; }}
     .b {{ font-weight: bold; }}
     .title {{ font-family: 'Trebuchet MS', Tahoma, sans-serif; font-size: 14px; font-weight: bold; fill: #fff; }}
   </style>
   <defs>
     <linearGradient id="titlebar" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#0a5fe8"/><stop offset=".12" stop-color="#3d95ff"/><stop offset=".35" stop-color="#0b5fe6"/>
-      <stop offset=".9" stop-color="#0052d9"/><stop offset="1" stop-color="#003fb0"/>
+      <stop offset="0" stop-color="#3a3f47"/><stop offset=".12" stop-color="#4a5058"/><stop offset=".35" stop-color="#2a2e34"/>
+      <stop offset=".9" stop-color="#1b1e22"/><stop offset="1" stop-color="#0e1012"/>
     </linearGradient>
-    <linearGradient id="close" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e87a5a"/><stop offset="1" stop-color="#c2350f"/></linearGradient>
-    <linearGradient id="tb" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4f93ff"/><stop offset="1" stop-color="#0a4fd0"/></linearGradient>
+    <linearGradient id="close" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#d0603f"/><stop offset="1" stop-color="#8e2a10"/></linearGradient>
+    <linearGradient id="tb" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4a5058"/><stop offset="1" stop-color="#262a30"/></linearGradient>
     <linearGradient id="go" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7fd77a"/><stop offset="1" stop-color="#2a9a2a"/></linearGradient>
     <linearGradient id="fold" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffe9a8"/><stop offset="1" stop-color="#f3bf3f"/></linearGradient>
-    <linearGradient id="hdr" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fdfdfd"/><stop offset="1" stop-color="#d9e4f8"/></linearGradient>
-    <linearGradient id="pane" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7ba2e7"/><stop offset="1" stop-color="#6375d6"/></linearGradient>
-    <linearGradient id="taskhdr" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#c6d3f7"/></linearGradient>
+    <linearGradient id="hdr" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3a3f47"/><stop offset="1" stop-color="#262a30"/></linearGradient>
+    <linearGradient id="pane" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#23272d"/><stop offset="1" stop-color="#1a1d22"/></linearGradient>
+    <linearGradient id="taskhdr" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#3a3f47"/><stop offset="1" stop-color="#2a2f36"/></linearGradient>
   </defs>
   {body}
 </svg>
